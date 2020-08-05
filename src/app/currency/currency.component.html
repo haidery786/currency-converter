@@ -1,0 +1,15 @@
+<div>
+
+  <currency-input-select 
+    [model]="baseObject" 
+    [currencyArr]="arrBase" 
+    (onKeyupFn)="onKeyupBase($event.target.value)" 
+    (onSelectFn)="onSelectBase($event)"
+  ></currency-input-select>
+  <currency-input-select 
+    [model]="convertObject" 
+    [currencyArr]="arrConvert" 
+    (onSelectFn)="onSelectConvert($event)"
+  ></currency-input-select>
+
+ </div>

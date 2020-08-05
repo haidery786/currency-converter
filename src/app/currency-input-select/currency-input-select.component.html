@@ -1,0 +1,21 @@
+<div>
+  <input
+    #input
+    type="number"
+    placeholder="0.00"
+    [ngModel]="inputValue"
+    [attr.id]="inputId"
+    [name]="name"
+    (focusout)="focusEvent($event)"
+    (click)="input.select()"
+    (input)="onKeyup($event)"
+  />
+  <select
+    [ngModel]="selectedRate"
+    [name]="name"
+    (ngModelChange)="onSelect($event)"
+  >
+    <option>{{ selectedRate }}</option>
+    <option *ngFor="let i of currencyArr" [ngValue]="i">{{ i.code }}</option>
+  </select>
+</div>
